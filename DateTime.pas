@@ -20,12 +20,22 @@ begin
     result := (d2, m2);
 end;
 
-function DaysInYear(year:IsLeapYear ): integer;
+function DaysInYear(year:integer ): integer;
 begin
   if isLeapYear(year) then
     result := 366
   else result := 365;
-end;}
+end;
+
+function DaysInYearRange(y1, y2: integer):integer;
+begin
+  result := 0;
+  for var y := y1 to y2 do
+  begin
+    result += DaysInYear(y);
+  end;
+end;
+
 
 begin
   println(DateTime.Now.Year)
