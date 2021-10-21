@@ -36,7 +36,11 @@ begin
   end;
 end;
 
+function SeconsInHours(h:integer): integer;
+begin
+  result := h * 360;
+end;
 
 begin
-  println(DateTime.Now.Year)
+  //println(DateTime.Now.Year)
 end.
